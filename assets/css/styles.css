@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
 header {
     background-color: #d9eed9;
     padding: 25px 0;
@@ -16,33 +17,35 @@ header {
 
 header h1 {
     text-align: center;
+    font-size: 1.5em; 
 }
+
 
 nav ul {
     display: flex;
+    flex-direction: column; 
     align-items: center;
-    justify-content: space-around;
-    padding: 0 35%;
+    gap: 10px; 
     margin-top: 20px;
 }
 
 nav ul li a {
     color: rgb(33, 212, 9);
-    font-size: 20px;
+    font-size: 18px; 
 }
 
+
 main h2 {
-    margin: 45px 0;
-    margin-left: 150px;
-    font-size: 25px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.2em; 
 }
 
 .product-list {
     display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin: 30px 200px;
+    grid-template-columns: 1fr; 
+    gap: 100px;
+    margin: 20px;
 }
 
 .product {
@@ -51,7 +54,7 @@ main h2 {
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 300px;
+    max-width: 100%; 
 }
 
 .product img {
@@ -72,6 +75,7 @@ main h2 {
     color: rgb(33, 212, 9);
 }
 
+
 footer {
     padding: 15px 0;
     background-color: rgb(7, 98, 68);
@@ -80,5 +84,48 @@ footer {
 footer p {
     text-align: center;
     color: white;
-    font-size: 16px;
+    font-size: 14px; 
+}
+
+
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row; 
+        justify-content: space-around;
+        padding: 0 10%; 
+    }
+
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); 
+        margin: 30px 100px;
+    }
+
+    main h2 {
+        font-size: 1.5em; 
+        text-align: left;
+    }
+
+    footer p {
+        font-size: 16px; 
+    }
+}
+
+
+@media (min-width: 1024px) {
+    nav ul {
+        justify-content: space-around;
+        padding: 0 35%;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(3, 1fr); 
+        margin: 30px 200px; 
+    }
+
+    main h2 { 
+        margin-left: 150px; 
+    }
+    .product h2 {
+        text-align: center;
+    }
 }
